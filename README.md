@@ -1,8 +1,8 @@
-# React JSX Breakpoints
+# React CSS Breakpoints
 
 Component style breakpoints so that you won't have to create custom components to handle responsive design.
 
-I was working on a project and handling breakpoints via react hooks are bad as you'll have milliseconds (sometimes a whole second) of delay before the right element shows up on the screen. So I decided to create this package to handle breakpoints via html-css components.
+This package uses css as breakpoints for components instead of using media queries via react hooks. This is to avoid unnecessary re-renders of components and to avoid the milliseconds of delay when using media queries.
 
 <!-- ![npm bundle size](https://img.shields.io/bundlephobia/min/jsx-breakpoints?style=flat-square)
 ![npm bundle size](https://img.shields.io/bundlephobia/minzip/@codifytools/jsx-breakpoints?style=flat-square)
@@ -33,7 +33,7 @@ export interface BreakpointProps extends PropsWithChildren<HTMLAttributes<HTMLDi
 
 ## Sample
 
-![Demo GIF](https://file-asia-se-01-api.db.srv01.xyzapps.xyz/files/2023-09-14%2015-27-26.gif)
+[Demo GIF](https://file-asia-se-01-api.db.srv01.xyzapps.xyz/files/2023-09-14%2015-27-26.gif)
 
 Import first the css of the module
 
