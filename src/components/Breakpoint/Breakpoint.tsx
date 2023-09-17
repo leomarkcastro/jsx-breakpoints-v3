@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import style from './index.module.scss';
+import style from './index.module.css';
 
 export interface BreakpointProps extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {
   start?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '';

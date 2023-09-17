@@ -10,6 +10,7 @@ import { getFiles } from './scripts/buildUtils';
 import pkg from './package.json';
 import terser from '@rollup/plugin-terser';
 import replace from '@rollup/plugin-replace';
+import css from 'rollup-plugin-import-css';
 
 const extensions = ['.js', '.ts', '.jsx', '.tsx'];
 const excludeExtensions = [
@@ -51,7 +52,8 @@ export default {
       preventAssignment: true,
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
-    postcss(postcssConfig),
+    // postcss(postcssConfig),
+    css(),
     babel({
       babelHelpers: 'bundled',
       exclude: 'node_modules/**',
