@@ -42,8 +42,8 @@ export default {
   // input: ['./src/index.ts', ...getFiles('./src/components', extensions, excludeExtensions)],
   input: './src/index.ts',
   output: [
-    { file: pkg.main, format: 'cjs', sourcemap: true },
-    { file: pkg.module, format: 'esm', sourcemap: true },
+    // { file: pkg.main, format: 'cjs', sourcemap: true },
+    { file: pkg.module, format: 'esm' },
   ],
   plugins: [
     postcss(postcssConfig),
@@ -59,7 +59,7 @@ export default {
       declaration: true,
       declarationDir: 'dist',
     }),
-    typescriptPaths(),
+    // typescriptPaths(),
     terser(),
     visualizer({
       filename: 'bundle-analysis.html',
