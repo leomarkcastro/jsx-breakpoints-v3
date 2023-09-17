@@ -9,6 +9,7 @@ import { typescriptPaths } from 'rollup-plugin-typescript-paths';
 import { getFiles } from './scripts/buildUtils';
 import pkg from './package.json';
 import terser from '@rollup/plugin-terser';
+import replace from '@rollup/plugin-replace';
 
 const extensions = ['.js', '.ts', '.jsx', '.tsx'];
 const excludeExtensions = [
@@ -43,14 +44,18 @@ export default {
   input: './src/index.ts',
   output: [
     // { file: pkg.main, format: 'cjs', sourcemap: true },
-    { file: pkg.module, format: 'esm' },
+    { file: pkg.module, format: 'esm', sourcemap: true },
   ],
   plugins: [
+    replace({
+      preventAssignment: true,
+      'process.env.NODE_ENV': JSON.stringify('production'),
+    }),
     postcss(postcssConfig),
     babel({
       babelHelpers: 'bundled',
       exclude: 'node_modules/**',
-      presets: ['@babel/preset-env', '@babel/preset-react'],
+      presets: ['@babel/preset-env', ''],
     }),
     resolve(),
     commonjs(),
@@ -59,7 +64,7 @@ export default {
       declaration: true,
       declarationDir: 'dist',
     }),
-    // typescriptPaths(),
+    typescriptPaths(),
     terser(),
     visualizer({
       filename: 'bundle-analysis.html',
