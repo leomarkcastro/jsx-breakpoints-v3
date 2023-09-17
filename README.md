@@ -39,12 +39,12 @@ Import first the css of the module
 
 ```jsx
 // _app.tsx
-import 'jsx-breakpoints/dist/index.esm.css';
+import 'react-css-breakpoints/dist/index.esm.css';
 ```
 
 ```jsx
 // index.tsx
-import { JsxBreakpoint } from 'jsx-breakpoints';
+import { JsxBreakpoint } from 'react-css-breakpoints';
 
 const app = () => {
   return (

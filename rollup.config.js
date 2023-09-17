@@ -62,7 +62,7 @@ export default {
     typescript({
       tsconfig: './tsconfig.build.json',
       declaration: true,
-      declarationDir: 'dist',
+      declarationDir: '',
     }),
     typescriptPaths(),
     terser(),
