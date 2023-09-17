@@ -2,6 +2,12 @@
 
 All notable changes to this project will be documented in this file. See [standard-version](https://github.com/conventional-changelog/standard-version) for commit guidelines.
 
+### [0.1.7](https://github.com/leomarkcastro/jsx-breakpoints-v3/compare/v0.1.5...v0.1.7) (2023-09-17)
+
+### Bug Fixes
+
+- moved-from-postcss-to-css-loader ([2d5e321](https://github.com/leomarkcastro/jsx-breakpoints-v3/commit/2d5e3216c3887ce5bf7c6eea3c3faac6bd99adb0))
+
 ### [0.1.6](https://github.com/leomarkcastro/jsx-breakpoints-v3/compare/v0.1.5...v0.1.6) (2023-09-17)
 
 ### [0.1.5](https://github.com/leomarkcastro/jsx-breakpoints-v3/compare/v0.1.2...v0.1.5) (2023-09-17)
