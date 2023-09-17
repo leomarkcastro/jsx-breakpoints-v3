@@ -1,6 +1,6 @@
 {
   "name": "react-css-breakpoints",
-  "version": "0.1.13",
+  "version": "0.1.14",
   "license": "MIT",
   "description": "",
   "outputDir": "./dist",
@@ -44,6 +44,7 @@
     "@rollup/plugin-babel": "^6.0.3",
     "@rollup/plugin-commonjs": "^23.0.3",
     "@rollup/plugin-node-resolve": "^15.0.1",
+    "@rollup/plugin-replace": "^5.0.2",
     "@rollup/plugin-terser": "^0.4.3",
     "@rollup/plugin-typescript": "^10.0.1",
     "@storybook/addon-actions": "^6.5.14",
@@ -132,8 +133,5 @@
   "resolutions": {
     "autoprefixer": "^10.4.12",
     "postcss": "^8.2.12"
-  },
-  "dependencies": {
-    "@rollup/plugin-replace": "^5.0.2"
   }
 }
