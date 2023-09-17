@@ -1,6 +1,6 @@
 import React, { PropsWithChildren, HTMLAttributes } from 'react';
 import classNames from 'classnames';
-import style from './index.module.css';
+import './Breakpoint.css';
 
 export interface BreakpointProps extends PropsWithChildren<HTMLAttributes<HTMLDivElement>> {
   start?: 'sm' | 'md' | 'lg' | 'xl' | '2xl' | '';
@@ -9,41 +9,41 @@ export interface BreakpointProps extends PropsWithChildren<HTMLAttributes<HTMLDi
 }
 
 export function Breakpoint(props: BreakpointProps) {
-  const { children, className, ...otherProps } = props;
+  const { children, className, start, end, ...otherProps } = props;
 
-  let customClassName = `${style.contents} `;
-  switch (props.start) {
+  let customClassName = `content `;
+  switch (start) {
     case 'md':
-      customClassName += `${style['max-sm:hidden']} `;
+      customClassName += `max-sm:hidden `;
       break;
     case 'lg':
-      customClassName += `${style['max-md:hidden']} `;
+      customClassName += `max-md:hidden `;
       break;
     case 'xl':
-      customClassName += `${style['max-lg:hidden']} `;
+      customClassName += `max-lg:hidden `;
       break;
     case '2xl':
-      customClassName += `${style['max-xl:hidden']} `;
+      customClassName += `max-xl:hidden `;
       break;
     default:
       customClassName += '';
       break;
   }
-  switch (props.end) {
+  switch (end) {
     case 'sm':
-      customClassName += `${style['sm:hidden']} `;
+      customClassName += `sm:hidden `;
       break;
     case 'md':
-      customClassName += `${style['md:hidden']} `;
+      customClassName += `md:hidden `;
       break;
     case 'lg':
-      customClassName += `${style['lg:hidden']} `;
+      customClassName += `lg:hidden `;
       break;
     case 'xl':
-      customClassName += `${style['xl:hidden']} `;
+      customClassName += `xl:hidden `;
       break;
     case '2xl':
-      customClassName += `${style['2xl:hidden']} `;
+      customClassName += `2xl:hidden `;
       break;
     default:
       customClassName += '';

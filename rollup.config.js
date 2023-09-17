@@ -52,8 +52,7 @@ export default {
       preventAssignment: true,
       'process.env.NODE_ENV': JSON.stringify('production'),
     }),
-    // postcss(postcssConfig),
-    css(),
+    postcss(postcssConfig),
     babel({
       babelHelpers: 'bundled',
       exclude: 'node_modules/**',

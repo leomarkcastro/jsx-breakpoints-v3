@@ -39,57 +39,57 @@ Import first the css of the module
 
 ```jsx
 // _app.tsx
-import 'react-css-breakpoints/dist/index.esm.css';
+import 'react-css-breakpoints/dist/index.css';
 ```
 
 ```jsx
 // index.tsx
-import { JsxBreakpoint } from 'react-css-breakpoints';
+import { Breakpoint } from 'react-css-breakpoints';
 
 const app = () => {
   return (
     <div>
-      <JsxBreakpoint start="sm" end="sm">
+      <Breakpoint start="sm" end="sm">
         <p>Only on mobile</p>
-      </JsxBreakpoint>
+      </Breakpoint>
 
-      <JsxBreakpoint start="md" end="md">
+      <Breakpoint start="md" end="md">
         <p>Only on tablet</p>
-      </JsxBreakpoint>
+      </Breakpoint>
 
-      <JsxBreakpoint start="lg" end="lg">
+      <Breakpoint start="lg" end="lg">
         <p>Only on laptop</p>
-      </JsxBreakpoint>
+      </Breakpoint>
 
-      <JsxBreakpoint start="xl" end="xl">
+      <Breakpoint start="xl" end="xl">
         <p>Only on desktop</p>
-      </JsxBreakpoint>
+      </Breakpoint>
 
-      <JsxBreakpoint start="2xl" end="2xl">
+      <Breakpoint start="2xl" end="2xl">
         <p>Only on 2xl</p>
-      </JsxBreakpoint>
+      </Breakpoint>
 
       <br />
 
-      <JsxBreakpoint start="sm">
+      <Breakpoint start="sm">
         <p>On mobile and up</p>
-      </JsxBreakpoint>
+      </Breakpoint>
 
-      <JsxBreakpoint start="md">
+      <Breakpoint start="md">
         <p>On tablet and up</p>
-      </JsxBreakpoint>
+      </Breakpoint>
 
-      <JsxBreakpoint start="lg">
+      <Breakpoint start="lg">
         <p>On laptop and up</p>
-      </JsxBreakpoint>
+      </Breakpoint>
 
-      <JsxBreakpoint start="xl">
+      <Breakpoint start="xl">
         <p>On desktop and up</p>
-      </JsxBreakpoint>
+      </Breakpoint>
 
-      <JsxBreakpoint start="2xl">
+      <Breakpoint start="2xl">
         <p>On 2xl and up</p>
-      </JsxBreakpoint>
+      </Breakpoint>
     </div>
   );
 };
