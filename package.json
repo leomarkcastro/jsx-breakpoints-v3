@@ -114,7 +114,8 @@
   },
   "peerDependencies": {
     "react": ">=16.x",
-    "react-dom": ">=16.x"
+    "react-dom": ">=16.x",
+    "tslib": ">=2.6.x"
   },
   "files": [
     "dist",
